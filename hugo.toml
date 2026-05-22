@@ -23,6 +23,17 @@ defaultContentLanguage = "en"
     [languages.en.params]
       description = "A blog about C programming, low-level concepts, and systems engineering."
 
+	[languages.en.params.homeInfoParams]
+		Title = "Hi there! I'm Pablo 👋"
+		Content = "Welcome to my blog. Here I document my journey writing C, building custom memory allocators, and exploring low-level systems programming."
+
+	[[languages.en.params.socialIcons]]
+		name = "github"
+		url = "https://github.com/ansuzgs"
+	[[languages.en.params.socialIcons]]
+		name = "linkedin"
+		url = "https://linkedin.com/in/pablogonzalez21191/"
+
   # Configuración para ESPAÑOL
   [languages.es]
     languageName = "Español"
@@ -30,3 +41,14 @@ defaultContentLanguage = "en"
     title = "Void *Pablogs (ES)"
     [languages.es.params]
       description = "Un blog sobre programación en C, bajo nivel y desarrollo de sistemas."
+
+	[languages.es.params.homeInfoParams]
+		Title = "¡Hola! Soy Pablo 👋"
+		Content = "Bienvenido a mi blog. Aquí documento mis proyectos en C, la creación de allocators de memoria y la programación de sistemas a bajo nivel."
+
+	[[languages.es.params.socialIcons]]
+		name = "github"
+		url = "https://github.com/ansuzgs"
+	[[languages.es.params.socialIcons]]
+		name = "linkedin"
+		url = "https://linkedin.com/in/pablogonzalez21191/"
