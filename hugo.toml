@@ -1,4 +1,5 @@
-baseURL = "https://pablogs.dev/"
+# baseURL = "https://pablogs.dev/"
+baseURL = 'https://example.org/'
 title = "Void *Pablogs" # Cambia esto por el nombre que elijas
 theme = "PaperMod"      # Ajusta según el tema que instales
 
