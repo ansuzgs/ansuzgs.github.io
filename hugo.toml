@@ -1,4 +1,31 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'PaperMod'
+baseURL = "https://pablogs.dev/"
+title = "Void *Pablogs" # Cambia esto por el nombre que elijas
+theme = "PaperMod"      # Ajusta según el tema que instales
+
+# 1. Configuración de Taxonomías
+# Aquí le decimos a Hugo que queremos usar 'series' además de los clásicos 'tags' y 'categories'
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+# 2. Configuración Multilenguaje (i18n)
+defaultContentLanguage = "en"
+
+[languages]
+  # Configuración para INGLÉS (Por defecto)
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = "Void *Pablogs"
+    # Puedes añadir parámetros específicos del idioma, útiles para SEO
+    [languages.en.params]
+      description = "A blog about C programming, low-level concepts, and systems engineering."
+
+  # Configuración para ESPAÑOL
+  [languages.es]
+    languageName = "Español"
+    weight = 2
+    title = "Void *Pablogs (ES)"
+    [languages.es.params]
+      description = "Un blog sobre programación en C, bajo nivel y desarrollo de sistemas."
