@@ -1,11 +1,16 @@
 +++
 title = "Coalescing y Splitting - Defragmentando en el sitio"
 author = ["pablo"]
-date = 2026-05-23
+date = 2026-05-24
 tags = ["memory", "c"]
 draft = true
-series = ["Escribiendo un Allocator en C"]
+translationKey = "post-04-coalescing-and-splitting"
+series = ["Memory Allocation y GC desde cero"]
+subtitle = "Cómo convertir fragmentos dispersos en bloques útiles"
+seriesPost = 1
 +++
+
+_Post 4 de 13 — Serie: Memory Allocation y Garbage Collection desde cero_
 
 En el [Post 1]({{< relref "index" >}}) construimos un bump allocator que solo avanza. En el Post 2 le dimos block headers para que cada bloque sepa cuánto mide y si está en uso. En el Post 3 añadimos `heap_free()` y una free list: por primera vez, el allocador puede reclamar bloques y reutilizarlos con first-fit. Funciona. Pero tiene un problema que dejamos deliberadamente abierto, visible en el Ejemplo 2 del Post 3:
 

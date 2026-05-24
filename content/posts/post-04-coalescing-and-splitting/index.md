@@ -1,7 +1,7 @@
 +++
 title = "Coalescing y Splitting"
 author = ["pablo"]
-date = 2026-05-23
+date = 2026-05-24
 tags = ["memory", "c"]
 draft = true
 series = ["Writing an allocator in C"]
