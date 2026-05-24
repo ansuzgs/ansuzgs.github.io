@@ -1,54 +1,145 @@
-# baseURL = "https://pablogs.dev/"
-baseURL = 'https://example.org/'
-title = "Void *Pablogs" # Cambia esto por el nombre que elijas
-theme = "PaperMod"      # Ajusta según el tema que instales
+baseURL = "https://pablogs.dev/"
+title = "Void *Pablogs"
+theme = "PaperMod"
+enableRobotsTXT = true
+pygmentsUseClasses = true
+enableEmoji = true
 
-# 1. Configuración de Taxonomías
-# Aquí le decimos a Hugo que queremos usar 'series' además de los clásicos 'tags' y 'categories'
+# Syntax highlighting
+[markup]
+  [markup.highlight]
+    noClasses = false         # Use external CSS for highlighting
+    lineNos = true
+    lineNumbersInTable = true
+    style = "monokai"
+
+  [markup.goldmark.renderer]
+    unsafe = true             # Allow raw HTML in Markdown (useful for callouts)
+
 [taxonomies]
   category = "categories"
   tag = "tags"
   series = "series"
 
-# 2. Configuración Multilenguaje (i18n)
 defaultContentLanguage = "en"
 
+# ---------------------------------------------------------------------------
+# LANGUAGES
+# ---------------------------------------------------------------------------
 [languages]
-  # Configuración para INGLÉS (Por defecto)
+
   [languages.en]
     languageName = "English"
     weight = 1
     title = "Void *Pablogs"
-    # Puedes añadir parámetros específicos del idioma, útiles para SEO
+
     [languages.en.params]
       description = "A blog about C programming, low-level concepts, and systems engineering."
 
-	[languages.en.params.homeInfoParams]
-		Title = "Hi there! I'm Pablo 👋"
-		Content = "Welcome to my blog. Here I document my journey writing C, building custom memory allocators, and exploring low-level systems programming."
+    # English navigation menu
+    [[languages.en.menu.main]]
+      name = "Posts"
+      url = "/posts/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "Series"
+      url = "/series/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "Projects"
+      url = "/projects/"
+      weight = 3
+    [[languages.en.menu.main]]
+      name = "About"
+      url = "/about/"
+      weight = 4
 
-	[[languages.en.params.socialIcons]]
-		name = "github"
-		url = "https://github.com/ansuzgs"
-	[[languages.en.params.socialIcons]]
-		name = "linkedin"
-		url = "https://linkedin.com/in/pablogonzalez21191/"
-
-  # Configuración para ESPAÑOL
   [languages.es]
     languageName = "Español"
     weight = 2
-    title = "Void *Pablogs (ES)"
+    title = "Void *Pablogs"
+
     [languages.es.params]
       description = "Un blog sobre programación en C, bajo nivel y desarrollo de sistemas."
 
-	[languages.es.params.homeInfoParams]
-		Title = "¡Hola! Soy Pablo 👋"
-		Content = "Bienvenido a mi blog. Aquí documento mis proyectos en C, la creación de allocators de memoria y la programación de sistemas a bajo nivel."
+    # Spanish navigation menu
+    [[languages.es.menu.main]]
+      name = "Posts"
+      url = "/es/posts/"
+      weight = 1
+    [[languages.es.menu.main]]
+      name = "Series"
+      url = "/es/series/"
+      weight = 2
+    [[languages.es.menu.main]]
+      name = "Proyectos"
+      url = "/es/projects/"
+      weight = 3
+    [[languages.es.menu.main]]
+      name = "Sobre mí"
+      url = "/es/about/"
+      weight = 4
 
-	[[languages.es.params.socialIcons]]
-		name = "github"
-		url = "https://github.com/ansuzgs"
-	[[languages.es.params.socialIcons]]
-		name = "linkedin"
-		url = "https://linkedin.com/in/pablogonzalez21191/"
+# ---------------------------------------------------------------------------
+# GLOBAL PARAMS
+# ---------------------------------------------------------------------------
+[params]
+  author = "Pablo"
+  defaultTheme = "dark"
+  disableThemeToggle = false
+
+  # Post display options
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true    # Copy button on every code block
+  ShowToc = true                # Table of contents for long posts
+  TocOpen = false               # Collapsed by default
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+
+  # Landing page hero block
+  [params.homeInfoParams]
+    Title = "void *pablogs"
+    Content = """
+Low-level C programming, systems concepts, and the occasional rabbit hole. \
+Posts on allocators, data structures, OOP patterns in C, and a growing language called **Zinc**.
+"""
+
+  # Social icons shown on the home page
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/ansuzgs"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/pablogonzalez21191/"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+  # Cover image defaults (used when a post has no explicit cover)
+  [params.cover]
+    hidden = false
+    hiddenInList = false
+    hiddenInSingle = false
+
+  # Search (PaperMod built-in Fuse.js)
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 2
+    keys = ["title", "permalink", "summary", "content"]
+
+# ---------------------------------------------------------------------------
+# BUILD / OUTPUT
+# ---------------------------------------------------------------------------
+[outputs]
+  home = ["HTML", "RSS", "JSON"]   # JSON required for search
+
