@@ -5,6 +5,7 @@ date = 2026-05-24
 draft = false
 translationKey = "post-01-hello-array"
 series = ["Dynamic Arrays in C"]
+seriesPost = 1
 +++
 
 ## The Probem No One Starts With {#the-probem-no-one-starts-with}
