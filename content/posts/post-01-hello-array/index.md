@@ -78,7 +78,7 @@ The returned pointer has a hidden *header* just before it (typically 8–16 byte
 <pre style="width: fit-content; margin: 0 auto;">
 What malloc returns:        What actually exists in memory:
                             ┌──────────────────┐
-                            │  allocator header │  (hidden, 8-16 bytes)
+                            │ allocator header │  (hidden, 8-16 bytes)
     ptr ──────────────────► ├──────────────────┤
                             │                  │
                             │   your 20 bytes  │
