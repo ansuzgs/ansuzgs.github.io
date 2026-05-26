@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="612pt" height="115pt" viewBox="0.00 0.00 612.00 115.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 111)">
+<title>IntArray</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-111 607.79,-111 607.79,4 -4,4"/>
+<!-- metadata -->
+<g id="node1" class="node">
+<title>metadata</title>
+<polygon fill="#fff3cd" stroke="black" points="0,-35.5 0,-71.5 333.65,-71.5 333.65,-35.5 0,-35.5"/>
+<text xml:space="preserve" text-anchor="middle" x="45.89" y="-50.6" font-family="Helvetica,sans-Serif" font-size="11.00">IntArray (struct)</text>
+<polyline fill="none" stroke="black" points="91.79,-36.3 91.79,-71.5"/>
+<text xml:space="preserve" text-anchor="middle" x="154.53" y="-50.6" font-family="Helvetica,sans-Serif" font-size="11.00">data: 0x56fbb1d642d0</text>
+<polyline fill="none" stroke="black" points="217.28,-36.3 217.28,-71.5"/>
+<text xml:space="preserve" text-anchor="middle" x="241.17" y="-50.6" font-family="Helvetica,sans-Serif" font-size="11.00">size: 5</text>
+<polyline fill="none" stroke="black" points="265.07,-36.3 265.07,-71.5"/>
+<text xml:space="preserve" text-anchor="middle" x="299.36" y="-50.6" font-family="Helvetica,sans-Serif" font-size="11.00">capacity: 5</text>
+</g>
+<!-- buffer -->
+<g id="node2" class="node">
+<title>buffer</title>
+<polygon fill="#d1ecf1" stroke="black" points="430.24,-0.5 430.24,-106.5 603.79,-106.5 603.79,-0.5 430.24,-0.5"/>
+<text xml:space="preserve" text-anchor="middle" x="493.57" y="-50.2" font-family="Helvetica,sans-Serif" font-size="11.00">Heap Buffer (20 bytes)</text>
+<polyline fill="none" stroke="black" points="556.9,-0.5 556.9,-106.5"/>
+<text xml:space="preserve" text-anchor="middle" x="580.35" y="-92.6" font-family="Helvetica,sans-Serif" font-size="11.00">[0]=10</text>
+<polyline fill="none" stroke="black" points="556.9,-85.3 603.79,-85.3"/>
+<text xml:space="preserve" text-anchor="middle" x="580.35" y="-71.4" font-family="Helvetica,sans-Serif" font-size="11.00">[1]=20</text>
+<polyline fill="none" stroke="black" points="556.9,-64.1 603.79,-64.1"/>
+<text xml:space="preserve" text-anchor="middle" x="580.35" y="-50.2" font-family="Helvetica,sans-Serif" font-size="11.00">[2]=30</text>
+<polyline fill="none" stroke="black" points="556.9,-42.9 603.79,-42.9"/>
+<text xml:space="preserve" text-anchor="middle" x="580.35" y="-29" font-family="Helvetica,sans-Serif" font-size="11.00">[3]=40</text>
+<polyline fill="none" stroke="black" points="556.9,-21.7 603.79,-21.7"/>
+<text xml:space="preserve" text-anchor="middle" x="580.35" y="-7.8" font-family="Helvetica,sans-Serif" font-size="11.00">[4]=50</text>
+</g>
+<!-- metadata&#45;&gt;buffer -->
+<g id="edge1" class="edge">
+<title>metadata-&gt;buffer</title>
+<path fill="none" stroke="#0c5460" stroke-width="2" d="M334.02,-53.5C362.98,-53.5 392.24,-53.5 418.57,-53.5"/>
+<polygon fill="#0c5460" stroke="#0c5460" stroke-width="2" points="417.03,-57 427.03,-53.5 417.03,-50 417.03,-57"/>
+<text xml:space="preserve" text-anchor="middle" x="381.94" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">  owns (heap)</text>
+</g>
+</g>
+</svg>
