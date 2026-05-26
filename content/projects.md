@@ -2,8 +2,8 @@
 title: "Projects"
 date: 2025-01-01
 layout: "single"
-ShowToc: true
-TocOpen: true
+ShowToc: false
+TocOpen: false
 ShowReadingTime: false
 ---
 
