@@ -1,0 +1,27 @@
+/* Series box for PaperMod */
+.series-box {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1em 1.25em;
+    margin: 1.5em 0;
+    background: var(--entry);
+}
+
+.series-box .series-title {
+    font-weight: 600;
+    margin-bottom: 0.6em;
+}
+
+.series-box ol {
+    margin: 0;
+    padding-left: 1.4em;
+}
+
+.series-box li {
+    margin: 0.3em 0;
+    font-size: 0.95em;
+}
+
+.series-box .series-current strong {
+    color: var(--primary);
+}

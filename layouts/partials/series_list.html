@@ -1,0 +1,22 @@
+{{- with .Params.series }}
+  {{- $seriesName := index . 0 }}
+  {{- $seriesPages := where $.Site.RegularPages ".Params.series" "intersect" (slice $seriesName) }}
+  {{- if gt (len $seriesPages) 1 }}
+<div class="series-box">
+  <p class="series-title">
+    Series: <a href="{{ printf "/series/%s/" ($seriesName | urlize) | relURL }}">{{ $seriesName }}</a>
+  </p>
+  <ol>
+    {{- range $seriesPages.ByDate }}
+    <li{{if eq $.RelPermalink .RelPermalink }} class="series-current"{{ end }}>
+      {{- if eq $.RelPermalink .RelPermalink -}}
+        <strong>{{ .Title }}</strong>
+      {{- else -}}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{- end -}}
+    </li>
+    {{- end }}
+  </ol>
+</div>
+  {{- end }}
+{{- end }}

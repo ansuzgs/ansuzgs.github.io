@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="971pt" height="206pt" viewBox="0.00 0.00 971.00 206.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 202.4)">
+<title>Realloc</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-202.4 966.98,-202.4 966.98,4 -4,4"/>
+<text xml:space="preserve" text-anchor="middle" x="481.49" y="-183.6" font-family="Helvetica,sans-Serif" font-size="12.00">realloc: capacity 2 → 16</text>
+<g id="clust1" class="cluster">
+<title>cluster_old</title>
+<polygon fill="none" stroke="#dc3545" stroke-dasharray="5,2" points="8,-92 8,-168 351.68,-168 351.68,-92 8,-92"/>
+<text xml:space="preserve" text-anchor="middle" x="179.84" y="-153.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#dc3545">Before (FREED)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_new</title>
+<polygon fill="none" stroke="#28a745" points="215.89,-8 215.89,-84 954.98,-84 954.98,-8 215.89,-8"/>
+<text xml:space="preserve" text-anchor="middle" x="585.43" y="-69.2" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#28a745">After (CURRENT)</text>
+</g>
+<!-- old_meta -->
+<g id="node1" class="node">
+<title>old_meta</title>
+<polygon fill="#f8d7da" stroke="black" points="16,-101 16,-137 186.89,-137 186.89,-101 16,-101"/>
+<text xml:space="preserve" text-anchor="middle" x="43.26" y="-116.1" font-family="Helvetica,sans-Serif" font-size="11.00">IntArray</text>
+<polyline fill="none" stroke="black" points="70.51,-101.8 70.51,-137"/>
+<text xml:space="preserve" text-anchor="middle" x="94.41" y="-116.1" font-family="Helvetica,sans-Serif" font-size="11.00">size: 2</text>
+<polyline fill="none" stroke="black" points="118.3,-101.8 118.3,-137"/>
+<text xml:space="preserve" text-anchor="middle" x="152.59" y="-116.1" font-family="Helvetica,sans-Serif" font-size="11.00">capacity: 2</text>
+</g>
+<!-- old_buf -->
+<g id="node2" class="node">
+<title>old_buf</title>
+<polygon fill="#f8d7da" stroke="black" points="287.21,-101 287.21,-137 343.68,-137 343.68,-101 287.21,-101"/>
+<text xml:space="preserve" text-anchor="middle" x="301.33" y="-116.1" font-family="Helvetica,sans-Serif" font-size="11.00">10</text>
+<polyline fill="none" stroke="black" points="315.45,-101.8 315.45,-137"/>
+<text xml:space="preserve" text-anchor="middle" x="329.56" y="-116.1" font-family="Helvetica,sans-Serif" font-size="11.00">20</text>
+</g>
+<!-- old_meta&#45;&gt;old_buf -->
+<g id="edge1" class="edge">
+<title>old_meta-&gt;old_buf</title>
+<path fill="none" stroke="black" d="M187.15,-119C217.67,-119 250.66,-119 275.4,-119"/>
+<polygon fill="black" stroke="black" points="275.33,-122.5 285.33,-119 275.33,-115.5 275.33,-122.5"/>
+</g>
+<!-- new_buf -->
+<g id="node4" class="node">
+<title>new_buf</title>
+<polygon fill="#d4edda" stroke="black" points="501.36,-17 501.36,-53 946.98,-53 946.98,-17 501.36,-17"/>
+<text xml:space="preserve" text-anchor="middle" x="515.47" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">10</text>
+<polyline fill="none" stroke="black" points="529.59,-17.8 529.59,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="543.71" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">20</text>
+<polyline fill="none" stroke="black" points="557.83,-17.8 557.83,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="571.94" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">30</text>
+<polyline fill="none" stroke="black" points="586.06,-17.8 586.06,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="600.18" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">40</text>
+<polyline fill="none" stroke="black" points="614.3,-17.8 614.3,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="628.41" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">50</text>
+<polyline fill="none" stroke="black" points="642.53,-17.8 642.53,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="656.65" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">60</text>
+<polyline fill="none" stroke="black" points="670.77,-17.8 670.77,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="684.89" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">70</text>
+<polyline fill="none" stroke="black" points="699,-17.8 699,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="713.12" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">80</text>
+<polyline fill="none" stroke="black" points="727.24,-17.8 727.24,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="741.36" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">90</text>
+<polyline fill="none" stroke="black" points="755.47,-17.8 755.47,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="772.65" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">100</text>
+<polyline fill="none" stroke="black" points="789.83,-17.8 789.83,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="807" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">110</text>
+<polyline fill="none" stroke="black" points="824.18,-17.8 824.18,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="841.36" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">120</text>
+<polyline fill="none" stroke="black" points="858.53,-17.8 858.53,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="869.59" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">·</text>
+<polyline fill="none" stroke="black" points="880.65,-17.8 880.65,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="891.7" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">·</text>
+<polyline fill="none" stroke="black" points="902.76,-17.8 902.76,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="913.81" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">·</text>
+<polyline fill="none" stroke="black" points="924.87,-17.8 924.87,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="935.93" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">·</text>
+</g>
+<!-- old_buf&#45;&gt;new_buf -->
+<g id="edge3" class="edge">
+<title>old_buf-&gt;new_buf</title>
+<path fill="none" stroke="#0d6efd" stroke-dasharray="5,2" d="M344.08,-113.29C400.35,-101.67 530.67,-74.76 622.75,-55.74"/>
+<polygon fill="#0d6efd" stroke="#0d6efd" points="623.21,-59.22 632.3,-53.77 621.8,-52.36 623.21,-59.22"/>
+<text xml:space="preserve" text-anchor="middle" x="454.18" y="-111.47" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#0d6efd">  memcpy 8B</text>
+<text xml:space="preserve" text-anchor="middle" x="454.18" y="-99.47" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#0d6efd">  + free old</text>
+</g>
+<!-- new_meta -->
+<g id="node3" class="node">
+<title>new_meta</title>
+<polygon fill="#d4edda" stroke="black" points="223.89,-17 223.89,-53 407.01,-53 407.01,-17 223.89,-17"/>
+<text xml:space="preserve" text-anchor="middle" x="251.14" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">IntArray</text>
+<polyline fill="none" stroke="black" points="278.4,-17.8 278.4,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="305.35" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">size: 12</text>
+<polyline fill="none" stroke="black" points="332.31,-17.8 332.31,-53"/>
+<text xml:space="preserve" text-anchor="middle" x="369.66" y="-32.1" font-family="Helvetica,sans-Serif" font-size="11.00">capacity: 16</text>
+</g>
+<!-- new_meta&#45;&gt;new_buf -->
+<g id="edge2" class="edge">
+<title>new_meta-&gt;new_buf</title>
+<path fill="none" stroke="black" d="M407.47,-35C432.49,-35 460.82,-35 489.98,-35"/>
+<polygon fill="black" stroke="black" points="489.68,-38.5 499.68,-35 489.68,-31.5 489.68,-38.5"/>
+</g>
+</g>
+</svg>
