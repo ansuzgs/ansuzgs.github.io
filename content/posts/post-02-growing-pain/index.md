@@ -6,6 +6,9 @@ draft = false
 translationKey = "post-02-growing-pain"
 series = ["Dynamic Arrays in C"]
 seriesPost = 2
+tags = ["c", "dynamic-array", "realloc", "memory-management", "pointers"]
+description = "Master realloc() properly: the temporary pointer pattern, pointer invalidation, and why direct assignment is a bug. Build an auto-growing array in C."
+slug = "realloc-auto-growing-array-c"
 +++
 
 

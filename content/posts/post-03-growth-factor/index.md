@@ -6,6 +6,9 @@ draft = false
 translationKey = "post-03-growth-factor"
 series = ["Dynamic Arrays in C"]
 seriesPost = 3
+tags = ["c", "dynamic-array", "realloc", "benchmarks", "data-structures"]
+description = "Why Firefox and MSVC use 1.5x growth instead of 2x. The math, the memory reuse proof, and benchmarks comparing growth strategies for dynamic arrays."
+slug = "growth-factor-dynamic-array-1.5-vs-2"
 +++
 
 *Post 3 of the Dynamic Arrays in C series · [Full source code on GitHub](https://github.com/ansuzgs/dynamic-arrays-c/blob/main/src/post_03.c)*

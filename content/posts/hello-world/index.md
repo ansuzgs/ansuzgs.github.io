@@ -2,7 +2,8 @@
 title: "Hello World: Pointers, Memory, and Low-Level C"
 date: 2026-05-22
 draft: false
-tags: ["C", "blog", "pablogs.dev"]
+tags: ["C", "systems-programming", "memory-management"]
+description: "Welcome to pablogs.dev, a blog about building data structures, allocators, and a garbage collector from scratch in C."
 ---
 
 Every C project starts with a `printf("Hello, World!\n");`, and this blog is no exception. Welcome to **pablogs.dev**.

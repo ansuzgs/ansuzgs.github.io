@@ -7,6 +7,9 @@ translationKey = "post-01-no-malloc"
 series = ["Memory Allocation and GC from Scratch"]
 subtitle = "A Bump Allocator in 80 Lines of C"
 seriesPost = 1
+tags = ["c", "allocator", "malloc", "memory-management", "sbrk"]
+description = "Build a working memory allocator in 80 lines of C. Learn how sbrk() works, what malloc() hides, and write your first bump pointer from scratch."
+slug = "bump-allocator-c-sbrk"
 +++
 
 _Post 1 of 13 — Series: Memory Allocation and Garbage Collection from Scratch_

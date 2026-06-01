@@ -6,6 +6,9 @@ draft = false
 translationKey = "post-01-hello-array"
 series = ["Dynamic Arrays in C"]
 seriesPost = 1
+tags = ["c", "dynamic-array", "malloc", "data-structures", "pointers"]
+description = "Implement a dynamic array in C with malloc, free, and manual bookkeeping. The foundation for understanding how every vector works under the hood."
+slug = "dynamic-array-c-malloc-free"
 +++
 
 _Post 1 of the Dynamic Arrays in C series · [Full source code](https://github.com/ansuzgs/dynamic-arrays-c/blob/main/src/post_01.c)_
