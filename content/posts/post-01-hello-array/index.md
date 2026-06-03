@@ -192,7 +192,7 @@ int main(void)
     for (int i = 0; i < 5; i++)
         array_push(arr, values[i]);
  
-    /* This will fail — array is full */
+    /* This will fail, array is full */
     int rc = array_push(arr, 60);  /* returns -1 */
  
     /* Read back */
@@ -258,9 +258,9 @@ free(arr)          →  metadata struct second
 This reverse order is not a stylistic preference, it's a correctness requirement. Let's trace what happens if you swap them:
  
 ```c
-/* WRONG — undefined behavior */
+/* WRONG, undefined behavior */
 free(arr);           /* struct memory returned to allocator */
-free(arr->data);     /* arr is now a dangling pointer — reading arr->data
+free(arr->data);     /* arr is now a dangling pointer, reading arr->data
                         is an invalid memory access */
 ```
  

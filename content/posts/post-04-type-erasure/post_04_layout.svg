@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1125pt" height="158pt" viewBox="0.00 0.00 1125.00 158.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 153.6)">
+<title>GenericArray</title>
+<polygon fill="#fafafa" stroke="none" points="-4,4 -4,-153.6 1120.95,-153.6 1120.95,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_array_view</title>
+<polygon fill="#fafafa" stroke="#999999" stroke-dasharray="5,2" points="679.29,-8 679.29,-136 815.31,-136 815.31,-8 679.29,-8"/>
+<text xml:space="preserve" text-anchor="middle" x="747.3" y="-123" font-family="Courier,monospace" font-size="10.00">Array's view (bytes)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_caller_view</title>
+<polygon fill="#fafafa" stroke="#28a745" stroke-dasharray="5,2" points="954.13,-19 954.13,-125 1108.95,-125 1108.95,-19 954.13,-19"/>
+<text xml:space="preserve" text-anchor="middle" x="1031.54" y="-112" font-family="Courier,monospace" font-size="10.00">Caller's view (Record)</text>
+</g>
+<!-- metadata -->
+<g id="node1" class="node">
+<title>metadata</title>
+<polygon fill="#e8f4fd" stroke="black" points="0,-44 0,-80 608.09,-80 608.09,-44 0,-44"/>
+<text xml:space="preserve" text-anchor="middle" x="60.81" y="-59.1" font-family="Courier,monospace" font-size="11.00">Array (metadata)</text>
+<polyline fill="none" stroke="black" points="121.62,-44.8 121.62,-80"/>
+<text xml:space="preserve" text-anchor="middle" x="228.63" y="-59.1" font-family="Courier,monospace" font-size="11.00">data: void* → 0x64c7b6e8c4f0</text>
+<polyline fill="none" stroke="black" points="335.65,-44.8 335.65,-80"/>
+<text xml:space="preserve" text-anchor="middle" x="366.75" y="-59.1" font-family="Courier,monospace" font-size="11.00">size: 3</text>
+<polyline fill="none" stroke="black" points="397.86,-44.8 397.86,-80"/>
+<text xml:space="preserve" text-anchor="middle" x="442.16" y="-59.1" font-family="Courier,monospace" font-size="11.00">capacity: 4</text>
+<polyline fill="none" stroke="black" points="486.47,-44.8 486.47,-80"/>
+<text xml:space="preserve" text-anchor="middle" x="547.28" y="-59.1" font-family="Courier,monospace" font-size="11.00">element_size: 20</text>
+</g>
+<!-- bytes -->
+<g id="node2" class="node">
+<title>bytes</title>
+<polygon fill="#fff3cd" stroke="none" points="693.9,-15.6 693.9,-108.4 799.71,-108.4 799.71,-15.6 693.9,-15.6"/>
+<polygon fill="none" stroke="black" points="693.9,-85.2 693.9,-108.4 743.5,-108.4 743.5,-85.2 693.9,-85.2"/>
+<text xml:space="preserve" text-anchor="start" x="712.1" y="-93.5" font-family="Courier,monospace" font-size="11.00">+0</text>
+<polygon fill="none" stroke="black" points="743.5,-85.2 743.5,-108.4 799.71,-108.4 799.71,-85.2 743.5,-85.2"/>
+<text xml:space="preserve" text-anchor="start" x="758.4" y="-93.5" font-family="Courier,monospace" font-size="11.00">20 B</text>
+<polygon fill="none" stroke="black" points="693.9,-62 693.9,-85.2 743.5,-85.2 743.5,-62 693.9,-62"/>
+<text xml:space="preserve" text-anchor="start" x="708.8" y="-70.3" font-family="Courier,monospace" font-size="11.00">+20</text>
+<polygon fill="none" stroke="black" points="743.5,-62 743.5,-85.2 799.71,-85.2 799.71,-62 743.5,-62"/>
+<text xml:space="preserve" text-anchor="start" x="758.4" y="-70.3" font-family="Courier,monospace" font-size="11.00">20 B</text>
+<polygon fill="none" stroke="black" points="693.9,-38.8 693.9,-62 743.5,-62 743.5,-38.8 693.9,-38.8"/>
+<text xml:space="preserve" text-anchor="start" x="708.8" y="-47.1" font-family="Courier,monospace" font-size="11.00">+40</text>
+<polygon fill="none" stroke="black" points="743.5,-38.8 743.5,-62 799.71,-62 799.71,-38.8 743.5,-38.8"/>
+<text xml:space="preserve" text-anchor="start" x="758.4" y="-47.1" font-family="Courier,monospace" font-size="11.00">20 B</text>
+<polygon fill="none" stroke="black" points="693.9,-15.6 693.9,-38.8 743.5,-38.8 743.5,-15.6 693.9,-15.6"/>
+<text xml:space="preserve" text-anchor="start" x="698.9" y="-23.9" font-family="Courier,monospace" font-size="11.00">unused</text>
+<polygon fill="none" stroke="black" points="743.5,-15.6 743.5,-38.8 799.71,-38.8 799.71,-15.6 743.5,-15.6"/>
+<text xml:space="preserve" text-anchor="start" x="748.5" y="-23.9" font-family="Courier,monospace" font-size="11.00">1 slots</text>
+</g>
+<!-- metadata&#45;&gt;bytes -->
+<g id="edge1" class="edge">
+<title>metadata-&gt;bytes</title>
+<path fill="none" stroke="#0066cc" stroke-width="2" d="M608.46,-62C635.94,-62 661.4,-62 682.74,-62"/>
+<polygon fill="#0066cc" stroke="#0066cc" stroke-width="2" points="681.14,-65.5 691.14,-62 681.14,-58.5 681.14,-65.5"/>
+<text xml:space="preserve" text-anchor="middle" x="647.69" y="-75.5" font-family="Courier,monospace" font-size="9.00">  void*</text>
+<text xml:space="preserve" text-anchor="middle" x="647.69" y="-64.7" font-family="Courier,monospace" font-size="9.00">(opaque)</text>
+</g>
+<!-- typed -->
+<g id="node3" class="node">
+<title>typed</title>
+<polygon fill="#d4edda" stroke="none" points="962.13,-27.2 962.13,-96.8 1100.95,-96.8 1100.95,-27.2 962.13,-27.2"/>
+<polygon fill="none" stroke="black" points="962.13,-73.6 962.13,-96.8 991.94,-96.8 991.94,-73.6 962.13,-73.6"/>
+<text xml:space="preserve" text-anchor="start" x="967.13" y="-81.9" font-family="Courier,monospace" font-size="11.00">[0]</text>
+<polygon fill="none" stroke="black" points="991.94,-73.6 991.94,-96.8 1100.95,-96.8 1100.95,-73.6 991.94,-73.6"/>
+<text xml:space="preserve" text-anchor="start" x="1003.54" y="-81.9" font-family="Courier,monospace" font-size="11.00">id=1, "Alice"</text>
+<polygon fill="none" stroke="black" points="962.13,-50.4 962.13,-73.6 991.94,-73.6 991.94,-50.4 962.13,-50.4"/>
+<text xml:space="preserve" text-anchor="start" x="967.13" y="-58.7" font-family="Courier,monospace" font-size="11.00">[1]</text>
+<polygon fill="none" stroke="black" points="991.94,-50.4 991.94,-73.6 1100.95,-73.6 1100.95,-50.4 991.94,-50.4"/>
+<text xml:space="preserve" text-anchor="start" x="1010.14" y="-58.7" font-family="Courier,monospace" font-size="11.00">id=2, "Bob"</text>
+<polygon fill="none" stroke="black" points="962.13,-27.2 962.13,-50.4 991.94,-50.4 991.94,-27.2 962.13,-27.2"/>
+<text xml:space="preserve" text-anchor="start" x="967.13" y="-35.5" font-family="Courier,monospace" font-size="11.00">[2]</text>
+<polygon fill="none" stroke="black" points="991.94,-27.2 991.94,-50.4 1100.95,-50.4 1100.95,-27.2 991.94,-27.2"/>
+<text xml:space="preserve" text-anchor="start" x="996.94" y="-35.5" font-family="Courier,monospace" font-size="11.00">id=3, "Charlie"</text>
+</g>
+<!-- bytes&#45;&gt;typed -->
+<g id="edge2" class="edge">
+<title>bytes-&gt;typed</title>
+<path fill="none" stroke="#28a745" stroke-dasharray="5,2" d="M799.66,-62C841.95,-62 902.38,-62 950.81,-62"/>
+<polygon fill="#28a745" stroke="#28a745" points="950.7,-65.5 960.7,-62 950.7,-58.5 950.7,-65.5"/>
+<text xml:space="preserve" text-anchor="middle" x="884.72" y="-75.5" font-family="Courier,monospace" font-size="9.00">  cast to Record*</text>
+<text xml:space="preserve" text-anchor="middle" x="884.72" y="-64.7" font-family="Courier,monospace" font-size="9.00">(caller restores type)</text>
+</g>
+<!-- legend -->
+<g id="node4" class="node">
+<title>legend</title>
+<polygon fill="#f8f9fa" stroke="black" points="400.56,-149.6 201.53,-149.6 201.53,-98.4 406.56,-98.4 406.56,-143.6 400.56,-149.6"/>
+<polyline fill="none" stroke="black" points="400.56,-149.6 400.56,-143.6"/>
+<polyline fill="none" stroke="black" points="406.56,-143.6 400.56,-143.6"/>
+<text xml:space="preserve" text-anchor="middle" x="304.04" y="-137.5" font-family="Courier,monospace" font-size="9.00">Type Erasure:</text>
+<text xml:space="preserve" text-anchor="middle" x="304.04" y="-126.7" font-family="Courier,monospace" font-size="9.00">Array stores raw bytes.</text>
+<text xml:space="preserve" text-anchor="middle" x="304.04" y="-115.9" font-family="Courier,monospace" font-size="9.00">Caller casts back to original type.</text>
+<text xml:space="preserve" text-anchor="middle" x="304.04" y="-105.1" font-family="Courier,monospace" font-size="9.00">element_size = 20 bytes</text>
+</g>
+</g>
+</svg>
