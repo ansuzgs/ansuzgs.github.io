@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1312pt" height="323pt" viewBox="0.00 0.00 1312.00 323.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 318.8)">
+<title>TypeSafeWrappers</title>
+<polygon fill="#fafafa" stroke="none" points="-4,4 -4,-318.8 1307.72,-318.8 1307.72,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_macro_api</title>
+<polygon fill="#d4edda" stroke="#28a745" points="10,-232.4 10,-306.8 1057,-306.8 1057,-232.4 10,-232.4"/>
+<text xml:space="preserve" text-anchor="middle" x="533.5" y="-292" font-family="Courier,monospace" font-size="12.00">User-Facing API (Type-Safe Macros)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_checks</title>
+<polygon fill="#fff3cd" stroke="#ffc107" points="204,-111.2 204,-185.6 820,-185.6 820,-111.2 204,-111.2"/>
+<text xml:space="preserve" text-anchor="middle" x="512" y="-170.8" font-family="Courier,monospace" font-size="12.00">Compile-Time + Runtime Checks</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_internal</title>
+<polygon fill="#e8f4fd" stroke="#0066cc" points="8,-8 8,-82.4 982,-82.4 982,-8 8,-8"/>
+<text xml:space="preserve" text-anchor="middle" x="495" y="-67.6" font-family="Courier,monospace" font-size="12.00">Internal API (void* + memcpy)</text>
+</g>
+<!-- m_create -->
+<g id="node1" class="node">
+<title>m_create</title>
+<polygon fill="#c3e6cb" stroke="black" points="185.91,-276.4 18.09,-276.4 18.09,-240.4 185.91,-240.4 185.91,-276.4"/>
+<text xml:space="preserve" text-anchor="middle" x="102" y="-255.1" font-family="Courier,monospace" font-size="11.00">ARRAY_CREATE(type, cap)</text>
+</g>
+<!-- i_create -->
+<g id="node8" class="node">
+<title>i_create</title>
+<polygon fill="#b8daff" stroke="black" points="197.51,-52 16.49,-52 16.49,-16 197.51,-16 197.51,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="107" y="-30.7" font-family="Courier,monospace" font-size="11.00">array_create(sizeof, cap)</text>
+</g>
+<!-- m_create&#45;&gt;i_create -->
+<g id="edge1" class="edge">
+<title>m_create-&gt;i_create</title>
+<path fill="none" stroke="black" d="M102.39,-239.95C103.25,-201.78 105.3,-110.59 106.35,-63.78"/>
+<polygon fill="black" stroke="black" points="109.85,-63.96 106.58,-53.88 102.85,-63.8 109.85,-63.96"/>
+<text xml:space="preserve" text-anchor="middle" x="143.05" y="-134.5" font-family="Courier,monospace" font-size="9.00">  sizeof(type)</text>
+</g>
+<!-- m_push -->
+<g id="node2" class="node">
+<title>m_push</title>
+<polygon fill="#c3e6cb" stroke="black" points="391.81,-276.4 204.19,-276.4 204.19,-240.4 391.81,-240.4 391.81,-276.4"/>
+<text xml:space="preserve" text-anchor="middle" x="298" y="-255.1" font-family="Courier,monospace" font-size="11.00">ARRAY_PUSH(arr, type, val)</text>
+</g>
+<!-- chk_sizeof -->
+<g id="node6" class="node">
+<title>chk_sizeof</title>
+<polygon fill="#ffeeba" stroke="black" points="602,-155.2 391.64,-137.2 602,-119.2 812.36,-137.2 602,-155.2"/>
+<text xml:space="preserve" text-anchor="middle" x="602" y="-133.9" font-family="Courier,monospace" font-size="11.00">sizeof(type) == arr-&gt;element_size?</text>
+</g>
+<!-- m_push&#45;&gt;chk_sizeof -->
+<g id="edge2" class="edge">
+<title>m_push-&gt;chk_sizeof</title>
+<path fill="none" stroke="black" d="M342.53,-239.94C399.24,-217.7 496.8,-179.45 554.77,-156.72"/>
+<polygon fill="black" stroke="black" points="556.02,-159.99 564.05,-153.08 553.46,-153.47 556.02,-159.99"/>
+<text xml:space="preserve" text-anchor="middle" x="491.52" y="-196.3" font-family="Courier,monospace" font-size="9.00">  check size</text>
+</g>
+<!-- chk_tmp -->
+<g id="node7" class="node">
+<title>chk_tmp</title>
+<polygon fill="#ffeeba" stroke="black" points="373.61,-155.2 212.39,-155.2 212.39,-119.2 373.61,-119.2 373.61,-155.2"/>
+<text xml:space="preserve" text-anchor="middle" x="293" y="-140.5" font-family="Courier,monospace" font-size="11.00">type tmp = value;</text>
+<text xml:space="preserve" text-anchor="middle" x="293" y="-127.3" font-family="Courier,monospace" font-size="11.00">(compiler type-checks)</text>
+</g>
+<!-- m_push&#45;&gt;chk_tmp -->
+<g id="edge3" class="edge">
+<title>m_push-&gt;chk_tmp</title>
+<path fill="none" stroke="black" d="M297.27,-240.07C296.47,-220.91 295.16,-189.75 294.21,-166.93"/>
+<polygon fill="black" stroke="black" points="297.71,-166.91 293.79,-157.07 290.71,-167.2 297.71,-166.91"/>
+<text xml:space="preserve" text-anchor="middle" x="328.06" y="-196.3" font-family="Courier,monospace" font-size="9.00">  create tmp</text>
+</g>
+<!-- m_get -->
+<g id="node3" class="node">
+<title>m_get</title>
+<polygon fill="#c3e6cb" stroke="black" points="590.51,-276.4 409.49,-276.4 409.49,-240.4 590.51,-240.4 590.51,-276.4"/>
+<text xml:space="preserve" text-anchor="middle" x="500" y="-255.1" font-family="Courier,monospace" font-size="11.00">ARRAY_GET(arr, type, idx)</text>
+</g>
+<!-- m_get&#45;&gt;chk_sizeof -->
+<g id="edge5" class="edge">
+<title>m_get-&gt;chk_sizeof</title>
+<path fill="none" stroke="black" d="M514.83,-240.07C532.2,-219.77 561.09,-186.01 580.81,-162.96"/>
+<polygon fill="black" stroke="black" points="583.31,-165.43 587.15,-155.56 577.99,-160.88 583.31,-165.43"/>
+</g>
+<!-- m_set -->
+<g id="node4" class="node">
+<title>m_set</title>
+<polygon fill="#c3e6cb" stroke="black" points="823.02,-276.4 608.98,-276.4 608.98,-240.4 823.02,-240.4 823.02,-276.4"/>
+<text xml:space="preserve" text-anchor="middle" x="716" y="-255.1" font-family="Courier,monospace" font-size="11.00">ARRAY_SET(arr, type, idx, val)</text>
+</g>
+<!-- m_set&#45;&gt;chk_sizeof -->
+<g id="edge7" class="edge">
+<title>m_set-&gt;chk_sizeof</title>
+<path fill="none" stroke="black" d="M699.42,-240.07C679.82,-219.57 647.07,-185.33 625.02,-162.27"/>
+<polygon fill="black" stroke="black" points="627.63,-159.93 618.19,-155.12 622.57,-164.77 627.63,-159.93"/>
+</g>
+<!-- m_for -->
+<g id="node5" class="node">
+<title>m_for</title>
+<polygon fill="#c3e6cb" stroke="black" points="1048.72,-276.4 841.28,-276.4 841.28,-240.4 1048.72,-240.4 1048.72,-276.4"/>
+<text xml:space="preserve" text-anchor="middle" x="945" y="-255.1" font-family="Courier,monospace" font-size="11.00">ARRAY_FOREACH(arr, type, ptr)</text>
+</g>
+<!-- i_elem -->
+<g id="node12" class="node">
+<title>i_elem</title>
+<polygon fill="#b8daff" stroke="black" points="973.51,-52 792.49,-52 792.49,-16 973.51,-16 973.51,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="883" y="-37.3" font-family="Courier,monospace" font-size="11.00">element_at(arr, i)</text>
+<text xml:space="preserve" text-anchor="middle" x="883" y="-24.1" font-family="Courier,monospace" font-size="11.00">(char*)data + i*elem_size</text>
+</g>
+<!-- m_for&#45;&gt;i_elem -->
+<g id="edge9" class="edge">
+<title>m_for-&gt;i_elem</title>
+<path fill="none" stroke="black" d="M940.13,-239.95C929.45,-201.62 903.85,-109.81 890.86,-63.19"/>
+<polygon fill="black" stroke="black" points="894.31,-62.52 888.25,-53.83 887.56,-64.4 894.31,-62.52"/>
+<text xml:space="preserve" text-anchor="middle" x="970.07" y="-134.5" font-family="Courier,monospace" font-size="9.00">  typed iteration</text>
+</g>
+<!-- i_get -->
+<g id="node10" class="node">
+<title>i_get</title>
+<polygon fill="#b8daff" stroke="black" points="774.81,-52 587.19,-52 587.19,-16 774.81,-16 774.81,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="681" y="-30.7" font-family="Courier,monospace" font-size="11.00">(type*)array_get(arr, idx)</text>
+</g>
+<!-- chk_sizeof&#45;&gt;i_get -->
+<g id="edge6" class="edge">
+<title>chk_sizeof-&gt;i_get</title>
+<path fill="none" stroke="black" d="M614.69,-119.94C627.08,-104.07 646.13,-79.67 660.64,-61.09"/>
+<polygon fill="black" stroke="black" points="663.22,-63.46 666.61,-53.43 657.7,-59.16 663.22,-63.46"/>
+<text xml:space="preserve" text-anchor="middle" x="671.88" y="-93.1" font-family="Courier,monospace" font-size="9.00">  cast result</text>
+</g>
+<!-- i_set -->
+<g id="node11" class="node">
+<title>i_set</title>
+<polygon fill="#b8daff" stroke="black" points="569.51,-52 388.49,-52 388.49,-16 569.51,-16 569.51,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="479" y="-30.7" font-family="Courier,monospace" font-size="11.00">array_set(arr, idx, &amp;tmp)</text>
+</g>
+<!-- chk_sizeof&#45;&gt;i_set -->
+<g id="edge8" class="edge">
+<title>chk_sizeof-&gt;i_set</title>
+<path fill="none" stroke="black" d="M582.78,-120.39C562.98,-104.09 531.84,-78.47 508.83,-59.54"/>
+<polygon fill="black" stroke="black" points="511.26,-57.01 501.31,-53.36 506.81,-62.41 511.26,-57.01"/>
+</g>
+<!-- i_push -->
+<g id="node9" class="node">
+<title>i_push</title>
+<polygon fill="#b8daff" stroke="black" points="370.31,-52 215.69,-52 215.69,-16 370.31,-16 370.31,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="293" y="-30.7" font-family="Courier,monospace" font-size="11.00">array_push(arr, &amp;tmp)</text>
+</g>
+<!-- chk_tmp&#45;&gt;i_push -->
+<g id="edge4" class="edge">
+<title>chk_tmp-&gt;i_push</title>
+<path fill="none" stroke="black" d="M293,-119.03C293,-103.91 293,-81.58 293,-63.74"/>
+<polygon fill="black" stroke="black" points="296.5,-63.76 293,-53.76 289.5,-63.76 296.5,-63.76"/>
+<text xml:space="preserve" text-anchor="middle" x="309.2" y="-93.1" font-family="Courier,monospace" font-size="9.00">  &amp;tmp</text>
+</g>
+<!-- legend -->
+<g id="node13" class="node">
+<title>legend</title>
+<polygon fill="#f8f9fa" stroke="black" points="1297.72,-294.4 1066.28,-294.4 1066.28,-222.4 1303.72,-222.4 1303.72,-288.4 1297.72,-294.4"/>
+<polyline fill="none" stroke="black" points="1297.72,-294.4 1297.72,-288.4"/>
+<polyline fill="none" stroke="black" points="1303.72,-288.4 1297.72,-288.4"/>
+<text xml:space="preserve" text-anchor="middle" x="1185" y="-282.3" font-family="Courier,monospace" font-size="9.00">Pattern: Type-Safe Wrappers</text>
+<text xml:space="preserve" text-anchor="middle" x="1185" y="-261.5" font-family="Courier,monospace" font-size="9.00">User writes: ARRAY_PUSH(arr, int, 42)</text>
+<text xml:space="preserve" text-anchor="middle" x="1185" y="-250.7" font-family="Courier,monospace" font-size="9.00">Compiler sees: int tmp = 42;</text>
+<text xml:space="preserve" text-anchor="middle" x="1185" y="-239.9" font-family="Courier,monospace" font-size="9.00">Runtime checks: sizeof(int)==element_size</text>
+<text xml:space="preserve" text-anchor="middle" x="1185" y="-229.1" font-family="Courier,monospace" font-size="9.00">Executes: memcpy(slot, &amp;tmp, 4)</text>
+</g>
+</g>
+</svg>

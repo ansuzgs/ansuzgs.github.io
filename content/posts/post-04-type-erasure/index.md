@@ -110,9 +110,9 @@ int array_push(Array *arr, const void *element)
 }
 ```
 
-Two things changed from Post 2. First, the caller passes `const void *element`, a pointer to their value, not the value itself. You can't pass a `void` by value (it has no size), so you pass a pointer and let memcpy do the rest. Second, the assignment `arr->data[arr->size] = value` is replaced by `memcpy(destination, source, element_size)`. The memcpy copies exactly `element_size` bytes from the caller's pointer into the array's buffer. It doesn't know what those bytes represent, could be an int, could be a struct, could be anything. It just copies.
+Two things changed from [Post 2](../post-02-growing-pain/index.md). First, the caller passes `const void *element`, a pointer to their value, not the value itself. You can't pass a `void` by value (it has no size), so you pass a pointer and let memcpy do the rest. Second, the assignment `arr->data[arr->size] = value` is replaced by `memcpy(destination, source, element_size)`. The memcpy copies exactly `element_size` bytes from the caller's pointer into the array's buffer. It doesn't know what those bytes represent, could be an int, could be a struct, could be anything. It just copies.
 
-The growth logic is unchanged. Realloc still works because `realloc` operates on bytes, not types. We ask for `new_cap * element_size` bytes, and realloc either extends the block or allocates a new one and copies everything. The temporary pointer pattern from Post 2 still protects against allocation failure.
+The growth logic is unchanged. Realloc still works because `realloc` operates on bytes, not types. We ask for `new_cap * element_size` bytes, and realloc either extends the block or allocates a new one and copies everything. The temporary pointer pattern from [Post 2](../post-02-growing-pain/index.md) still protects against allocation failure.
 
 ### Get: The Caller Must Cast
 
