@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="575pt" height="897pt" viewBox="0.00 0.00 575.00 897.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 892.6)">
+<title>ErrorFlow</title>
+<polygon fill="#fafafa" stroke="none" points="-4,4 -4,-892.6 571.31,-892.6 571.31,4 -4,4"/>
+<text xml:space="preserve" text-anchor="middle" x="283.65" y="-873.8" font-family="Helvetica,sans-Serif" font-size="12.00">array_push() Error Flow</text>
+<text xml:space="preserve" text-anchor="middle" x="283.65" y="-859.4" font-family="Helvetica,sans-Serif" font-size="12.00">Post 6: When Things Go Wrong</text>
+<g id="clust1" class="cluster">
+<title>cluster_legend</title>
+<path fill="#fafafa" stroke="#bdbdbd" d="M463.31,-578C463.31,-578 547.31,-578 547.31,-578 553.31,-578 559.31,-584 559.31,-590 559.31,-590 559.31,-831.8 559.31,-831.8 559.31,-837.8 553.31,-843.8 547.31,-843.8 547.31,-843.8 463.31,-843.8 463.31,-843.8 457.31,-843.8 451.31,-837.8 451.31,-831.8 451.31,-831.8 451.31,-590 451.31,-590 451.31,-584 457.31,-578 463.31,-578"/>
+<text xml:space="preserve" text-anchor="middle" x="505.31" y="-830.8" font-family="Helvetica,sans-Serif" font-size="10.00">Legend</text>
+</g>
+<!-- entry -->
+<g id="node1" class="node">
+<title>entry</title>
+<ellipse fill="#e3f2fd" stroke="black" cx="343.31" cy="-797.8" rx="67.44" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="343.31" y="-794.8" font-family="Helvetica,sans-Serif" font-size="10.00">array_push(arr, elem)</text>
+</g>
+<!-- null_check -->
+<g id="node2" class="node">
+<title>null_check</title>
+<polygon fill="#fff9c4" stroke="black" points="343.31,-742.8 245.6,-710.8 343.31,-678.8 441.02,-710.8 343.31,-742.8"/>
+<text xml:space="preserve" text-anchor="middle" x="343.31" y="-713.8" font-family="Helvetica,sans-Serif" font-size="10.00">arr == NULL</text>
+<text xml:space="preserve" text-anchor="middle" x="343.31" y="-701.8" font-family="Helvetica,sans-Serif" font-size="10.00">or elem == NULL?</text>
+</g>
+<!-- entry&#45;&gt;null_check -->
+<g id="edge1" class="edge">
+<title>entry-&gt;null_check</title>
+<path fill="none" stroke="black" d="M343.31,-779.6C343.31,-772.23 343.31,-763.27 343.31,-754.31"/>
+<polygon fill="black" stroke="black" points="346.81,-754.59 343.31,-744.59 339.81,-754.59 346.81,-754.59"/>
+</g>
+<!-- need_grow -->
+<g id="node3" class="node">
+<title>need_grow</title>
+<polygon fill="#fff9c4" stroke="black" points="221.31,-622 141.99,-604 221.31,-586 300.62,-604 221.31,-622"/>
+<text xml:space="preserve" text-anchor="middle" x="221.31" y="-601" font-family="Helvetica,sans-Serif" font-size="10.00">size &gt;= capacity?</text>
+</g>
+<!-- null_check&#45;&gt;need_grow -->
+<g id="edge2" class="edge">
+<title>null_check-&gt;need_grow</title>
+<path fill="none" stroke="#2e7d32" d="M316.84,-687.06C295.72,-668.92 266.36,-643.7 245.78,-626.02"/>
+<polygon fill="#2e7d32" stroke="#2e7d32" points="248.29,-623.56 238.42,-619.7 243.73,-628.87 248.29,-623.56"/>
+<text xml:space="preserve" text-anchor="middle" x="290.97" y="-652.7" font-family="Helvetica,sans-Serif" font-size="9.00">no</text>
+</g>
+<!-- err_null -->
+<g id="node10" class="node">
+<title>err_null</title>
+<polygon fill="#ffcdd2" stroke="black" points="428.26,-632 318.36,-632 318.36,-576 428.26,-576 428.26,-632"/>
+<text xml:space="preserve" text-anchor="middle" x="373.31" y="-619" font-family="Helvetica,sans-Serif" font-size="10.00">return</text>
+<text xml:space="preserve" text-anchor="middle" x="373.31" y="-607" font-family="Helvetica,sans-Serif" font-size="10.00">ARRAY_ERR_NULL</text>
+<text xml:space="preserve" text-anchor="middle" x="373.31" y="-583" font-family="Helvetica,sans-Serif" font-size="10.00">Array: UNCHANGED</text>
+</g>
+<!-- null_check&#45;&gt;err_null -->
+<g id="edge10" class="edge">
+<title>null_check-&gt;err_null</title>
+<path fill="none" stroke="#c62828" stroke-dasharray="5,2" d="M351.51,-681.16C354.89,-669.35 358.85,-655.49 362.47,-642.86"/>
+<polygon fill="#c62828" stroke="#c62828" points="365.73,-644.19 365.12,-633.61 359,-642.26 365.73,-644.19"/>
+<text xml:space="preserve" text-anchor="middle" x="367.11" y="-652.7" font-family="Helvetica,sans-Serif" font-size="9.00">yes</text>
+</g>
+<!-- overflow -->
+<g id="node4" class="node">
+<title>overflow</title>
+<polygon fill="#fff9c4" stroke="black" points="152.31,-529.2 41.81,-497.2 152.31,-465.2 262.81,-497.2 152.31,-529.2"/>
+<text xml:space="preserve" text-anchor="middle" x="152.31" y="-500.2" font-family="Helvetica,sans-Serif" font-size="10.00">new_cap * elem_size</text>
+<text xml:space="preserve" text-anchor="middle" x="152.31" y="-488.2" font-family="Helvetica,sans-Serif" font-size="10.00">overflows?</text>
+</g>
+<!-- need_grow&#45;&gt;overflow -->
+<g id="edge4" class="edge">
+<title>need_grow-&gt;overflow</title>
+<path fill="none" stroke="#f57c00" d="M211.42,-587.98C202.2,-573.98 188.08,-552.53 175.95,-534.11"/>
+<polygon fill="#f57c00" stroke="#f57c00" points="178.9,-532.22 170.48,-525.8 173.05,-536.07 178.9,-532.22"/>
+<text xml:space="preserve" text-anchor="middle" x="197.94" y="-549.9" font-family="Helvetica,sans-Serif" font-size="9.00">yes</text>
+</g>
+<!-- do_copy -->
+<g id="node8" class="node">
+<title>do_copy</title>
+<polygon fill="#c8e6c9" stroke="black" points="228.65,-117 125.97,-117 125.97,-73 228.65,-73 228.65,-117"/>
+<text xml:space="preserve" text-anchor="middle" x="177.31" y="-104" font-family="Helvetica,sans-Serif" font-size="10.00">memcpy(slot, elem,</text>
+<text xml:space="preserve" text-anchor="middle" x="177.31" y="-92" font-family="Helvetica,sans-Serif" font-size="10.00">  element_size)</text>
+<text xml:space="preserve" text-anchor="middle" x="177.31" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">arr-&gt;size++</text>
+</g>
+<!-- need_grow&#45;&gt;do_copy -->
+<g id="edge3" class="edge">
+<title>need_grow-&gt;do_copy</title>
+<path fill="none" stroke="#2e7d32" d="M238.01,-589.3C258.43,-570.9 290.31,-536.1 290.31,-498.2 290.31,-498.2 290.31,-498.2 290.31,-187 290.31,-156.74 265.42,-134.83 239,-120.11"/>
+<polygon fill="#2e7d32" stroke="#2e7d32" points="240.68,-117.04 230.19,-115.52 237.44,-123.25 240.68,-117.04"/>
+<text xml:space="preserve" text-anchor="middle" x="316.31" y="-336.3" font-family="Helvetica,sans-Serif" font-size="9.00">no</text>
+<text xml:space="preserve" text-anchor="middle" x="316.31" y="-325.5" font-family="Helvetica,sans-Serif" font-size="9.00">(room exists)</text>
+</g>
+<!-- realloc_call -->
+<g id="node5" class="node">
+<title>realloc_call</title>
+<polygon fill="#e8f5e9" stroke="black" points="104.74,-412.4 27.88,-412.4 27.88,-368.4 104.74,-368.4 104.74,-412.4"/>
+<text xml:space="preserve" text-anchor="middle" x="66.31" y="-399.4" font-family="Helvetica,sans-Serif" font-size="10.00">tmp = realloc(</text>
+<text xml:space="preserve" text-anchor="middle" x="66.31" y="-387.4" font-family="Helvetica,sans-Serif" font-size="10.00">  arr-&gt;data,</text>
+<text xml:space="preserve" text-anchor="middle" x="66.31" y="-375.4" font-family="Helvetica,sans-Serif" font-size="10.00">  new_size)</text>
+</g>
+<!-- overflow&#45;&gt;realloc_call -->
+<g id="edge5" class="edge">
+<title>overflow-&gt;realloc_call</title>
+<path fill="none" stroke="#2e7d32" d="M131.49,-470.83C119.27,-455.94 103.77,-437.05 90.94,-421.42"/>
+<polygon fill="#2e7d32" stroke="#2e7d32" points="93.76,-419.33 84.71,-413.82 88.35,-423.77 93.76,-419.33"/>
+<text xml:space="preserve" text-anchor="middle" x="116.89" y="-439.1" font-family="Helvetica,sans-Serif" font-size="9.00">no</text>
+</g>
+<!-- err_overflow -->
+<g id="node11" class="node">
+<title>err_overflow</title>
+<polygon fill="#ffcdd2" stroke="black" points="262.27,-418.4 122.35,-418.4 122.35,-362.4 262.27,-362.4 262.27,-418.4"/>
+<text xml:space="preserve" text-anchor="middle" x="192.31" y="-405.4" font-family="Helvetica,sans-Serif" font-size="10.00">return</text>
+<text xml:space="preserve" text-anchor="middle" x="192.31" y="-393.4" font-family="Helvetica,sans-Serif" font-size="10.00">ARRAY_ERR_OVERFLOW</text>
+<text xml:space="preserve" text-anchor="middle" x="192.31" y="-369.4" font-family="Helvetica,sans-Serif" font-size="10.00">Array: UNCHANGED</text>
+</g>
+<!-- overflow&#45;&gt;err_overflow -->
+<g id="edge11" class="edge">
+<title>overflow-&gt;err_overflow</title>
+<path fill="none" stroke="#c62828" stroke-dasharray="5,2" d="M163.13,-467.84C167.64,-456.02 172.95,-442.13 177.79,-429.45"/>
+<polygon fill="#c62828" stroke="#c62828" points="181.05,-430.7 181.35,-420.11 174.51,-428.21 181.05,-430.7"/>
+<text xml:space="preserve" text-anchor="middle" x="181.71" y="-439.1" font-family="Helvetica,sans-Serif" font-size="9.00">yes</text>
+</g>
+<!-- realloc_ok -->
+<g id="node6" class="node">
+<title>realloc_ok</title>
+<polygon fill="#fff9c4" stroke="black" points="66.31,-304.8 0,-286.8 66.31,-268.8 132.62,-286.8 66.31,-304.8"/>
+<text xml:space="preserve" text-anchor="middle" x="66.31" y="-283.8" font-family="Helvetica,sans-Serif" font-size="10.00">tmp != NULL?</text>
+</g>
+<!-- realloc_call&#45;&gt;realloc_ok -->
+<g id="edge6" class="edge">
+<title>realloc_call-&gt;realloc_ok</title>
+<path fill="none" stroke="black" d="M66.31,-368.35C66.31,-353.29 66.31,-332.84 66.31,-316.32"/>
+<polygon fill="black" stroke="black" points="69.81,-316.63 66.31,-306.63 62.81,-316.63 69.81,-316.63"/>
+</g>
+<!-- update_ptr -->
+<g id="node7" class="node">
+<title>update_ptr</title>
+<polygon fill="#c8e6c9" stroke="black" points="128.06,-206 2.56,-206 2.56,-170 128.06,-170 128.06,-206"/>
+<text xml:space="preserve" text-anchor="middle" x="65.31" y="-191" font-family="Helvetica,sans-Serif" font-size="10.00">arr-&gt;data = tmp</text>
+<text xml:space="preserve" text-anchor="middle" x="65.31" y="-179" font-family="Helvetica,sans-Serif" font-size="10.00">arr-&gt;capacity = new_cap</text>
+</g>
+<!-- realloc_ok&#45;&gt;update_ptr -->
+<g id="edge7" class="edge">
+<title>realloc_ok-&gt;update_ptr</title>
+<path fill="none" stroke="#2e7d32" d="M66.13,-268.49C65.99,-254.4 65.78,-234.22 65.61,-217.71"/>
+<polygon fill="#2e7d32" stroke="#2e7d32" points="69.11,-217.96 65.51,-208 62.11,-218.03 69.11,-217.96"/>
+<text xml:space="preserve" text-anchor="middle" x="72.93" y="-242.7" font-family="Helvetica,sans-Serif" font-size="9.00">yes</text>
+</g>
+<!-- err_alloc -->
+<g id="node12" class="node">
+<title>err_alloc</title>
+<polygon fill="#ffcdd2" stroke="black" points="262.6,-222 146.02,-222 146.02,-154 262.6,-154 262.6,-222"/>
+<text xml:space="preserve" text-anchor="middle" x="204.31" y="-209" font-family="Helvetica,sans-Serif" font-size="10.00">return</text>
+<text xml:space="preserve" text-anchor="middle" x="204.31" y="-197" font-family="Helvetica,sans-Serif" font-size="10.00">ARRAY_ERR_ALLOC</text>
+<text xml:space="preserve" text-anchor="middle" x="204.31" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00">arr-&gt;data: VALID</text>
+<text xml:space="preserve" text-anchor="middle" x="204.31" y="-161" font-family="Helvetica,sans-Serif" font-size="10.00">Old elements: INTACT</text>
+</g>
+<!-- realloc_ok&#45;&gt;err_alloc -->
+<g id="edge12" class="edge">
+<title>realloc_ok-&gt;err_alloc</title>
+<path fill="none" stroke="#c62828" stroke-dasharray="5,2" d="M84.07,-273.34C100.13,-262.08 124.67,-244.86 147.4,-228.92"/>
+<polygon fill="#c62828" stroke="#c62828" points="149.26,-231.89 155.43,-223.28 145.24,-226.16 149.26,-231.89"/>
+<text xml:space="preserve" text-anchor="middle" x="151.93" y="-242.7" font-family="Helvetica,sans-Serif" font-size="9.00">no (NULL)</text>
+</g>
+<!-- update_ptr&#45;&gt;do_copy -->
+<g id="edge8" class="edge">
+<title>update_ptr-&gt;do_copy</title>
+<path fill="none" stroke="black" d="M86.64,-169.67C102.35,-156.91 124.06,-139.27 142.29,-124.45"/>
+<polygon fill="black" stroke="black" points="144.2,-127.41 149.75,-118.39 139.78,-121.98 144.2,-127.41"/>
+</g>
+<!-- success -->
+<g id="node9" class="node">
+<title>success</title>
+<ellipse fill="#a5d6a7" stroke="black" cx="177.31" cy="-18" rx="59.75" ry="18"/>
+<text xml:space="preserve" text-anchor="middle" x="177.31" y="-15" font-family="Helvetica,sans-Serif" font-size="10.00">return ARRAY_OK</text>
+</g>
+<!-- do_copy&#45;&gt;success -->
+<g id="edge9" class="edge">
+<title>do_copy-&gt;success</title>
+<path fill="none" stroke="black" d="M177.31,-72.71C177.31,-64.82 177.31,-55.75 177.31,-47.33"/>
+<polygon fill="black" stroke="black" points="180.81,-47.57 177.31,-37.57 173.81,-47.57 180.81,-47.57"/>
+</g>
+<!-- leg_ok -->
+<g id="node13" class="node">
+<title>leg_ok</title>
+<polygon fill="#c8e6c9" stroke="black" points="532.31,-815.8 478.31,-815.8 478.31,-779.8 532.31,-779.8 532.31,-815.8"/>
+<text xml:space="preserve" text-anchor="middle" x="505.31" y="-794.8" font-family="Helvetica,sans-Serif" font-size="10.00">Success</text>
+</g>
+<!-- leg_fail -->
+<g id="node14" class="node">
+<title>leg_fail</title>
+<polygon fill="#ffcdd2" stroke="black" points="551.1,-728.8 459.52,-728.8 459.52,-692.8 551.1,-692.8 551.1,-728.8"/>
+<text xml:space="preserve" text-anchor="middle" x="505.31" y="-713.8" font-family="Helvetica,sans-Serif" font-size="10.00">Failure</text>
+<text xml:space="preserve" text-anchor="middle" x="505.31" y="-701.8" font-family="Helvetica,sans-Serif" font-size="10.00">(state preserved)</text>
+</g>
+<!-- leg_ok&#45;&gt;leg_fail -->
+<!-- leg_decide -->
+<g id="node15" class="node">
+<title>leg_decide</title>
+<polygon fill="#fff9c4" stroke="black" points="505.31,-622 459.09,-604 505.31,-586 551.53,-604 505.31,-622"/>
+<text xml:space="preserve" text-anchor="middle" x="505.31" y="-601" font-family="Helvetica,sans-Serif" font-size="10.00">Decision</text>
+</g>
+<!-- leg_fail&#45;&gt;leg_decide -->
+</g>
+</svg>
