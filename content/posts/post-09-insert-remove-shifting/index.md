@@ -2,7 +2,7 @@
 title = "Insert, Remove, and the Cost of Shifting"
 author = ["pablo"]
 date = 2026-07-17
-draft = true
+draft = false
 translationKey = "post-09-insert-remove-shifting"
 series = ["Dynamic Arrays in C"]
 seriesPost = 9
