@@ -2,7 +2,7 @@
 title = "Iterators and Traversal Patterns in C"
 author = ["pablo"]
 date = 2026-07-24
-draft = true
+draft = false
 translationKey = "post-10-iterators-traversal"
 series = ["Dynamic Arrays in C"]
 seriesPost = 10
